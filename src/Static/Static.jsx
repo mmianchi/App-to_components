@@ -36,24 +36,30 @@ const HeaderLogo = (props) => {
 const Navigation = () => {
   return (
     <ul class="main-nav">
-      <NavOne />
-      <NavTwo />
+      <NavOne 
+        title={"My Courses"}
+        href={"#"}
+      />
+      <NavTwo 
+        title={"Account"}
+        href={"#"}
+      />
     </ul>
   );
 }
 
-const NavOne = () =>{
+const NavOne = (props) =>{
   return (
     <li>
-      <a href="#">My Courses</a>
+      <a href={props.href}>{props.title}</a>
     </li>
   );
 }
 
-const NavTwo = () => {
+const NavTwo = (props) => {
   return (
     <li>
-      <a href="#">Account</a>
+      <a href={props.href}>{props.title}</a>
     </li>
   );
 }
