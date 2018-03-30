@@ -2,7 +2,6 @@ import React from 'react';
 const Static = () => {
   return (
     <div>
-
       <header class="main-header">
         <h1 class="name"><a href="#">React Bootcamp</a></h1>
         <ul class="main-nav">
