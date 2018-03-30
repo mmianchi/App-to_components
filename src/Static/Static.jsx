@@ -92,39 +92,51 @@ const HeadTag = (props) => {
 const CardList = () => {
   return (
     <div class="row">
-      <CardOne />
-      <CardTwo />
-      <CardThree />
+      <CardOne
+        title={"Tutoring"}
+        content={"Progress starts with accountability. Be a part of a community. Find a mentor."}
+        buttonName={"Learn More"}
+      />
+      <CardTwo 
+        title={"Tutorials"}
+        content={"Do not start from scratch, just learn the pieces that you need to advance."}
+        buttonName={"Learn More"}
+      />
+      <CardThree 
+        title={"Code Reviews"}
+        content={"Code is not working out? Have a tutor review your code and get answers to your problems."}
+        buttonName={"Learn More"}
+      />
     </div>
   );
 }
 
-const CardOne = () => {
+const CardOne = (props) => {
   return (
     <div class="col">
-      <h2>Tutoring</h2>
-      <p>Progress starts with accountability. Be a part of a community. Find a mentor.</p>
-      <button class="btn-blue"><a href="#">Learn More</a></button>
+      <h2>{props.title}</h2>
+      <p>{props.content}</p>
+      <button class="btn-blue"><a href="#">{props.buttonName}</a></button>
     </div>
   );
 }
 
-const CardTwo = () => {
+const CardTwo = (props) => {
   return (
     <div class="col">
-      <h2>Tutorials</h2>
-      <p>Do not start from scratch, just learn the pieces that you need to advance.</p>
-      <button class="btn-blue"><a href="#">Learn More</a></button>
+      <h2>{props.title}</h2>
+      <p>{props.content}</p>
+      <button class="btn-blue"><a href="#">{props.buttonName}</a></button>
     </div>
   );
 }
 
-const CardThree = () => {
+const CardThree = (props) => {
   return (
     <div class="col">
-      <h2>Code Reviews</h2>
-      <p>Code is not working out? Have a tutor review your code and get answers to your problems.</p>
-      <button class="btn-blue"><a href="#">Learn More</a></button>
+      <h2>{props.title}</h2>
+      <p>{props.content}</p>
+      <button class="btn-blue"><a href="#">{props.buttonName}</a></button>
     </div>
   );
 }
