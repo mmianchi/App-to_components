@@ -67,21 +67,25 @@ const NavTwo = (props) => {
 const Banner = () => {
   return (
     <div class="banner">
-      <HeadLine />
-      <HeadTag />
+      <HeadLine
+        title={"React Bootcamp"}
+      />
+      <HeadTag 
+        title={"Helping you understand everything React"}
+      />
     </div>
   );
 }
 
-const HeadLine = () => {
+const HeadLine = (props) => {
   return (
-    <h1 class="headline">React Bootcamp</h1>
+    <h1 class="headline">{props.title}</h1>
   );
 }
 
-const HeadTag = () => {
+const HeadTag = (props) => {
   return (
-    <span class="tagline">Helping you understand everything React</span>
+    <span class="tagline">{props.title}</span>
   );
 }
 
