@@ -1,5 +1,5 @@
 import React from 'react';
-conts Static = () => {
+const Static = () => {
   return (
     <div>
 
@@ -39,7 +39,8 @@ conts Static = () => {
       <footer class="main-footer">
         <span>&copy;2018 React Bootcamp</span>
       </footer>
-
     </div>
   );
 }
+
+export default Static;
