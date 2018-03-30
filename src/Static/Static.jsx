@@ -10,10 +10,9 @@ const Static = () => {
   );
 }
 
-
 const Header = () => {
   return (
-    <header class="main-header">
+    <header className="main-header">
       <HeaderLogo 
       title={"React Bootcamp"}
       href={"#"}
@@ -27,7 +26,7 @@ const Header = () => {
 const HeaderLogo = (props) => {
   console.log("parent p",props)
   return (
-    <h1 class="name">
+    <h1 className="name">
       <a href="props.href">{props.title}</a>
     </h1>
   );
@@ -35,12 +34,12 @@ const HeaderLogo = (props) => {
 
 const Navigation = () => {
   return (
-    <ul class="main-nav">
-      <NavOne 
+    <ul className="main-nav">
+      <NavLink 
         title={"My Courses"}
         href={"#"}
       />
-      <NavTwo 
+      <NavLink 
         title={"Account"}
         href={"#"}
       />
@@ -48,15 +47,7 @@ const Navigation = () => {
   );
 }
 
-const NavOne = (props) =>{
-  return (
-    <li>
-      <a href={props.href}>{props.title}</a>
-    </li>
-  );
-}
-
-const NavTwo = (props) => {
+const NavLink = (props) =>{
   return (
     <li>
       <a href={props.href}>{props.title}</a>
@@ -66,7 +57,7 @@ const NavTwo = (props) => {
 
 const Banner = () => {
   return (
-    <div class="banner">
+    <div className="banner">
       <HeadLine
         title={"React Bootcamp"}
       />
@@ -79,30 +70,30 @@ const Banner = () => {
 
 const HeadLine = (props) => {
   return (
-    <h1 class="headline">{props.title}</h1>
+    <h1 className="headline">{props.title}</h1>
   );
 }
 
 const HeadTag = (props) => {
   return (
-    <span class="tagline">{props.title}</span>
+    <span className="tagline">{props.title}</span>
   );
 }
 
 const CardList = () => {
   return (
-    <div class="row">
-      <CardOne
+    <div className="row">
+      <Card
         title={"Tutoring"}
         content={"Progress starts with accountability. Be a part of a community. Find a mentor."}
         buttonName={"Learn More"}
       />
-      <CardTwo 
+      <Card
         title={"Tutorials"}
         content={"Do not start from scratch, just learn the pieces that you need to advance."}
         buttonName={"Learn More"}
       />
-      <CardThree 
+      <Card
         title={"Code Reviews"}
         content={"Code is not working out? Have a tutor review your code and get answers to your problems."}
         buttonName={"Learn More"}
@@ -111,40 +102,19 @@ const CardList = () => {
   );
 }
 
-const CardOne = (props) => {
+const Card = (props) => {
   return (
-    <div class="col">
+    <div className="col">
       <h2>{props.title}</h2>
       <p>{props.content}</p>
-      <button class="btn-blue"><a href="#">{props.buttonName}</a></button>
+      <button className="btn-blue"><a href="#">{props.buttonName}</a></button>
     </div>
   );
 }
-
-const CardTwo = (props) => {
-  return (
-    <div class="col">
-      <h2>{props.title}</h2>
-      <p>{props.content}</p>
-      <button class="btn-blue"><a href="#">{props.buttonName}</a></button>
-    </div>
-  );
-}
-
-const CardThree = (props) => {
-  return (
-    <div class="col">
-      <h2>{props.title}</h2>
-      <p>{props.content}</p>
-      <button class="btn-blue"><a href="#">{props.buttonName}</a></button>
-    </div>
-  );
-}
-
 
 const Footer = () => {
   return (
-    <footer class="main-footer">
+    <footer className="main-footer">
       <span>&copy;2018 React Bootcamp</span>
     </footer>
   );
