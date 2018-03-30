@@ -10,19 +10,25 @@ const Static = () => {
   );
 }
 
+
 const Header = () => {
   return (
     <header class="main-header">
-      <HeaderLogo /> 
+      <HeaderLogo 
+      title={"React Bootcamp"}
+      href={"#"}
+      new={null}
+      /> 
       <Navigation />
     </header>
   );
 }
 
-const HeaderLogo = () => {
+const HeaderLogo = (props) => {
+  console.log("parent p",props)
   return (
     <h1 class="name">
-      <a href="#">React Bootcamp</a>
+      <a href="props.href">{props.title}</a>
     </h1>
   );
 }
@@ -93,12 +99,11 @@ const CardOne = () => {
   );
 }
 
-
 const CardTwo = () => {
   return (
     <div class="col">
       <h2>Tutorials</h2>
-      <p>Don't start from scratch, just learn the pieces that you need to advance.</p>
+      <p>Do not start from scratch, just learn the pieces that you need to advance.</p>
       <button class="btn-blue"><a href="#">Learn More</a></button>
     </div>
   );
@@ -108,7 +113,7 @@ const CardThree = () => {
   return (
     <div class="col">
       <h2>Code Reviews</h2>
-      <p>Code isn't working out? Have a tutor review your code and get answers to your problems.</p>
+      <p>Code is not working out? Have a tutor review your code and get answers to your problems.</p>
       <button class="btn-blue"><a href="#">Learn More</a></button>
     </div>
   );
@@ -122,5 +127,6 @@ const Footer = () => {
     </footer>
   );
 }
+
 
 export default Static;
